@@ -15,11 +15,21 @@ export function SignupFormComponent(props) {
     handleChange,
     handleBlur,
     handleSubmit,
-    isSubmitting,
+
+    isPending,
+    isSuccess,
+    isError,
+    errorMessage,
+
+    pageLoading,
   } = props;
 
   const getFieldError = (name) => {
     return errors[name] && touched[name] && errors[name];
+  };
+
+  const isSubmitDisabled = () => {
+    return isPending || isSuccess;
   };
 
   return (
@@ -45,9 +55,11 @@ export function SignupFormComponent(props) {
             error={getFieldError(fieldPassword)}
           />
         </FieldLayout>
-        <Button type="submit" disabled={isSubmitting}>
+        <Button type="submit" disabled={isSubmitDisabled()}>
           Submit
         </Button>
+        {isPending && 'Loading...'}
+        {isError && errorMessage}
       </Container>
     </form>
   );

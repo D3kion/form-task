@@ -30,10 +30,9 @@ export function signupFormUploadData(data) {
       redirect(SIGNUP_FORM_REDIRECT_ON_UPLOAD_PATH);
     } catch (err) {
       if (err.response) {
-        console.log(err.response.data.message[0]);
         dispatch({
           type: SIGNUP_ACTION_TYPE.SIGNUP_FORM_UPLOAD_ERROR,
-          errorMessage: err.response.data.message,
+          errorMessage: err.response.data.message[0],
         });
       }
     }

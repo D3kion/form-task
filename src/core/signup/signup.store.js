@@ -26,9 +26,10 @@ export function signupStore(state = initialState, action) {
       };
 
     case SIGNUP_ACTION_TYPE.SIGNUP_FORM_UPLOAD_ERROR:
+      debugger;
       return {
         ...state,
-        signupForm: setRequestError(state.signupForm, action.message),
+        signupForm: setRequestError(state.signupForm, action.errorMessage),
       };
 
     default:

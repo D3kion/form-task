@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { text } from '../../../../lib/common/text';
 import { FieldLayout } from '../../../../lib/elements/layout';
 import { FieldPrimary } from '../../../../lib/elements/field';
 import { ButtonPrimary } from '../../../../lib/elements/button';
-import { Loader } from '../../../../lib/elements/loader';
-import { Error } from '../../../../lib/elements/error';
+import { LoaderForm } from '../../../../lib/elements/loader';
+import { ErrorForm } from '../../../../lib/elements/error';
+import { spacing } from '../../../../lib/theme';
 
 export function SignupFormComponent(props) {
   const {
@@ -24,8 +24,6 @@ export function SignupFormComponent(props) {
     isSuccess,
     isError,
     errorMessage,
-
-    pageLoading,
   } = props;
 
   const getFieldError = (name) => {
@@ -59,11 +57,13 @@ export function SignupFormComponent(props) {
             error={getFieldError(fieldPassword)}
           />
         </FieldLayout>
-        <ButtonPrimary type="submit" disabled={isSubmitDisabled()}>
-          {text('SIGNUP.SIGNUP_FORM.BUTTON.SUBMIT')}
-        </ButtonPrimary>
-        {isPending && <Loader />}
-        {isError && <Error>{errorMessage}</Error>}
+        <ButtonPrimary
+          tid="SIGNUP.SIGNUP_FORM.BUTTON.SUBMIT"
+          type="submit"
+          disabled={isSubmitDisabled()}
+        />
+        {isPending && <LoaderForm tid="SIGNUP.SIGNUP_FORM.LOADING" />}
+        {isError && <ErrorForm errorTid={errorMessage} />}
       </Container>
     </form>
   );
@@ -71,5 +71,5 @@ export function SignupFormComponent(props) {
 
 const Container = styled.div`
   display: grid;
-  gap: 12px;
+  gap: ${spacing(3)};
 `;

@@ -1,1 +1,1 @@
-export { Loader } from './loader';
+export { LoaderForm } from './form.loader';

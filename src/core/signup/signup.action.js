@@ -32,7 +32,7 @@ export function signupFormUploadData(data) {
       if (err.response) {
         dispatch({
           type: SIGNUP_ACTION_TYPE.SIGNUP_FORM_UPLOAD_ERROR,
-          errorMessage: err.response.data.message[0],
+          errorMessage: err.response.data.message,
         });
       }
     }

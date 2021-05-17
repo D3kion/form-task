@@ -1,1 +1,1 @@
-export { Error } from './error';
+export { ErrorForm } from './form.error';

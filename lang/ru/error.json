@@ -1,5 +1,3 @@
 {
-    "VALIDATION": {
-        "REQUIRED": "Required"
-    }
+  "SIGN_UP_USERNAME_ALREADY_EXISTS": "User with this login already exists!"
 }

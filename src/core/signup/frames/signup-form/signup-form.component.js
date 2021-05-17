@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FieldPrimary } from '../../../../lib/elements/field';
+import { text } from '../../../../lib/common/text';
 import { FieldLayout } from '../../../../lib/elements/layout';
+import { FieldPrimary } from '../../../../lib/elements/field';
+import { ButtonPrimary } from '../../../../lib/elements/button';
+import { Loader } from '../../../../lib/elements/loader';
+import { Error } from '../../../../lib/elements/error';
 
 export function SignupFormComponent(props) {
   const {
@@ -55,11 +59,11 @@ export function SignupFormComponent(props) {
             error={getFieldError(fieldPassword)}
           />
         </FieldLayout>
-        <Button type="submit" disabled={isSubmitDisabled()}>
-          Submit
-        </Button>
-        {isPending && 'Loading...'}
-        {isError && errorMessage}
+        <ButtonPrimary type="submit" disabled={isSubmitDisabled()}>
+          {text('SIGNUP.SIGNUP_FORM.BUTTON.SUBMIT')}
+        </ButtonPrimary>
+        {isPending && <Loader />}
+        {isError && <Error>{errorMessage}</Error>}
       </Container>
     </form>
   );
@@ -68,9 +72,4 @@ export function SignupFormComponent(props) {
 const Container = styled.div`
   display: grid;
   gap: 12px;
-`;
-
-const Button = styled.button`
-  background: #ddd;
-  border-radius: 15px;
 `;

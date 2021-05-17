@@ -18,5 +18,6 @@ export const THEME_SIZE = {
   },
   RADIUS: {
     FIELD: '5px',
+    BUTTON: '15px',
   },
 };

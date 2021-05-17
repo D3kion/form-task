@@ -36,7 +36,7 @@ const Title = styled(TextSecondary)`
 `;
 
 const Input = styled.input`
-  background: ${THEME_COLOR.INPUT_BACKGROUND};
+  background: ${THEME_COLOR.INPUT_PRIMARY};
   border-radius: ${THEME_SIZE.RADIUS.FIELD};
   padding: ${spacing(1.25)} ${spacing(2.5)};
 `;

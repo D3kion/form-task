@@ -4,5 +4,7 @@ export const THEME_COLOR = {
   TEXT_SECONDARY: '#707070',
   TEXT_DANGER: '#f00',
 
-  INPUT_BACKGROUND: '#f3f3f3',
+  BUTTON_PRIMARY: '#ddd',
+
+  INPUT_PRIMARY: '#f3f3f3',
 };

@@ -1,0 +1,10 @@
+API:
+  PORT: 4000
+
+DATABASE:
+  TYPE: 'postgres'
+  SYNCHRONIZE: true
+
+JWT:
+  EXPIRES_IN: '99999h'
+  SECRET: 'FKdksk12l3ldlsfdlLlsdll123l05kgjgk04jdkgn6kk2d0fkgsdk32ldovyjkxg'

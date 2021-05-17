@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { text } from '../../common/text';
-import { spacing } from '../../theme';
+import { spacing, THEME_COLOR, THEME_SIZE } from '../../theme';
 import { TextSecondary } from '../text';
 
 import { FieldPrimaryPropsType } from './field.type';
@@ -36,12 +36,12 @@ const Title = styled(TextSecondary)`
 `;
 
 const Input = styled.input`
-  background: #f3f3f3;
-  border-radius: 5px;
-  padding: 5px 10px;
+  background: ${THEME_COLOR.INPUT_BACKGROUND};
+  border-radius: ${THEME_SIZE.RADIUS.FIELD};
+  padding: ${spacing(1.25)} ${spacing(2.5)};
 `;
 
 const ErrorMessage = styled.span`
-  color: red;
-  font-size: 14px;
+  color: ${THEME_COLOR.TEXT_DANGER};
+  font-size: ${THEME_SIZE.FONT.SMALL};
 `;

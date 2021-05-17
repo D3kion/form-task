@@ -1,3 +1,4 @@
+import { Exclude } from 'class-transformer';
 import {
   Entity,
   Unique,
@@ -21,6 +22,7 @@ export class UserEntity extends BaseEntity {
   @Column({ unique: true })
   login: string;
 
+  @Exclude()
   @Column({ nullable: false })
   password: string;
 

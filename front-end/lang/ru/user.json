@@ -1,0 +1,10 @@
+{
+  "USER_LIST": {
+    "SECTION_NAME": "Users List",
+    "EMPTY_USERS": "Users not found",
+    "LOADING": "Loading...",
+    "USER_ITEM": {
+      "ID": "ID"
+    }
+  }
+}

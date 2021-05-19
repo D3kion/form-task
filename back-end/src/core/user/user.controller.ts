@@ -5,7 +5,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 
-import { UserEntity } from './user.entity';
+import { UserDataDto } from './dto/user-data.dto';
 import { UserService } from './user.service';
 
 @Controller('user')
@@ -14,7 +14,7 @@ export class UserController {
 
   @UseInterceptors(ClassSerializerInterceptor)
   @Get()
-  findAll(): Promise<UserEntity[]> {
+  findAll(): Promise<UserDataDto[]> {
     return this.userService.findAll();
   }
 }

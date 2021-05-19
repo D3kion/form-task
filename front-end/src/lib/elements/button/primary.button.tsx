@@ -3,14 +3,12 @@ import styled from 'styled-components';
 import { text } from '../../common/text';
 import { THEME_COLOR, THEME_SIZE } from '../../theme';
 
-/**
- * @param {object} props
- * @param {string} props.tid
- */
-export function ButtonPrimary(props) {
-  const { tid, ...rest } = props;
+import { ButtonPropsType } from './button.type';
 
-  return <Button {...rest}>{text(tid)}</Button>;
+export function ButtonPrimary(props: ButtonPropsType) {
+  const { tid, tvalue, ...rest } = props;
+
+  return <Button {...rest}>{text(tid, tvalue)}</Button>;
 }
 
 const Button = styled.button`

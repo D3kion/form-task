@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { TextPrimary, TextSecondary } from '../text';
 import { spacing } from '../../theme';
 
-export function ListItemPrimary(props) {
+import { ListItemPropsType } from './list-item.type';
+
+export function ListItemPrimary(props: ListItemPropsType) {
   const { titleTid, titleTvalue, valueTid, valueTvalue } = props;
 
   return (

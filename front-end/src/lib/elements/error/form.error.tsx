@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { text } from '../../common/text';
 import { THEME_COLOR } from '../../theme';
 
-export function ErrorForm(props) {
+import { ErrorPropsType } from './error.type';
+
+export function ErrorForm(props: ErrorPropsType) {
   const { errorTid } = props;
 
   return <ErrorMessage>{text(`ERROR.${errorTid}`)}</ErrorMessage>;

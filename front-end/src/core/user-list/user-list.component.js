@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { text } from '../../lib/common/text';
 import { spacing, THEME_COLOR, THEME_SIZE } from '../../lib/theme';
-import { LoaderForm } from '../../lib/elements/loader/form.loader';
+import { LoaderForm } from '../../lib/elements/loader';
 
 import { ListContainer } from './frames/list';
 

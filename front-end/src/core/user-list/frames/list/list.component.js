@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { spacing, THEME_COLOR } from '../../../../lib/theme';
-import { ListItemPrimary } from '../../../../lib/elements/list-item/primary.list-item';
+import { ListItemPrimary } from '../../../../lib/elements/list-item';
 
 export function ListComponent(props) {
   const users = props.users;

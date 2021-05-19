@@ -1,3 +1,17 @@
+export const USER_LIST_FIELD_NAME = {
+  ID: 'id',
+  LOGIN: 'login',
+  CREATE_DATE: 'createDate',
+  ROLE: 'role',
+};
+
+export const USER_LIST_DATA_NAME = {
+  ID: 'id',
+  LOGIN: 'login',
+  CREATE_DATE: 'createDate',
+  ROLE: 'role',
+};
+
 export const USER_LIST_ACTION_TYPE = {
   USER_LIST_LOAD_PENDING: 'USER_LIST_ACTION_TYPE.USER_LIST_LOAD_PENDING',
   USER_LIST_LOAD_SUCCESS: 'USER_LIST_ACTION_TYPE.USER_LIST_LOAD_SUCCESS',

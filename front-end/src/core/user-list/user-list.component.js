@@ -10,16 +10,11 @@ import { ListContainer } from './frames/list';
 export function UserListComponent(props) {
   const { isPending, isSuccess, users } = props;
 
-  const isUsersEmpty = () => {
-    return isSuccess && !users.length;
-  };
-
   return (
     <Container>
-      <SectionName>Users list</SectionName>
+      <SectionName>{text('USER.USER_LIST.SECTION_NAME')}</SectionName>
       {isPending && <LoaderForm tid="USER.USER_LIST.LOADING" />}
-      {isUsersEmpty() && <span>{text('USER.USER_LIST.EMPTY_USERS')}</span>}
-      {!isUsersEmpty() && <ListContainer {...props} />}
+      {isSuccess && <ListContainer {...props} />}
     </Container>
   );
 }

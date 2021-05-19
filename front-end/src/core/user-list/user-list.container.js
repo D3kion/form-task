@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
+  getRequestData,
   isRequestPending,
   isRequestSuccess,
 } from '../../main/store/store.service';
@@ -20,7 +21,7 @@ export function UserListContainer() {
 
   return (
     <UserListComponent
-      users={userList.users}
+      users={getRequestData(userList, [])}
       isPending={isRequestPending(userList)}
       isSuccess={isRequestSuccess(userList)}
     />

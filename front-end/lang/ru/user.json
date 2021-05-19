@@ -4,7 +4,8 @@
     "EMPTY_USERS": "Users not found",
     "LOADING": "Loading...",
     "USER_ITEM": {
-      "ID": "ID"
+      "ID": "ID: {{userId}}",
+      "LOGIN": "{{login}}"
     }
   }
 }

@@ -8,7 +8,7 @@ import {
 import { USER_LIST_ACTION_TYPE } from './user-list.type';
 
 const initialState = {
-  userList: { ...initRequestState(), users: [] },
+  userList: initRequestState(),
 };
 
 export function userListStore(state = initialState, action) {
@@ -22,7 +22,7 @@ export function userListStore(state = initialState, action) {
     case USER_LIST_ACTION_TYPE.USER_LIST_LOAD_SUCCESS:
       return {
         ...state,
-        userList: setRequestSuccess(state.userList),
+        userList: setRequestSuccess(state.userList, action.data),
       };
 
     case USER_LIST_ACTION_TYPE.USER_LIST_LOAD_ERROR:

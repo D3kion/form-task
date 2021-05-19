@@ -1,1 +1,1 @@
-export { ItemUser } from './user.item';
+export { ListItemPrimary } from './primary.list-item';
